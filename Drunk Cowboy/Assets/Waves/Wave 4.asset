@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446deefe607c0544294aec961c0d3712, type: 3}
+  m_Name: Wave 4
+  m_EditorClassIdentifier: 
+  bottlePrefab: {fileID: 5830378015207455642, guid: a57e890b7237b2a4590942cc07a2a3c6, type: 3}
+  pathPrefab: {fileID: 7676537109180245859, guid: dd4ac77b1be3bad419ef9c368d561174, type: 3}
+  timeBetweenSpawns: 0.5
+  spawnRandomFactor: 1
+  numberOfBottles: 6
+  moveSpeed: 5
