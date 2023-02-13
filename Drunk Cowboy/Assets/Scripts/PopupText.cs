@@ -8,9 +8,11 @@ public class PopupText : MonoBehaviour
     TextMeshProUGUI textPro;
     List<string> showText = new List<string>();
     private int index;
+    Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         textPro = GetComponent<TextMeshProUGUI>();
         showText.Add("Gun Slinger");
         showText.Add("Top Gun!");
@@ -21,15 +23,19 @@ public class PopupText : MonoBehaviour
         showText.Add("Fantastic");
         showText.Add("Marvelous");
 
-        GenerateRandomWord();
     }
 
     public void GenerateRandomWord()
     {
-        index = Random.Range(0, showText.Count);
+        index = Random.Range(0, showText.Count);        
+        StartCoroutine(DisplayText());
     }
-    private void Update()
-    {        
-        textPro.text = showText[index];    
+
+    IEnumerator DisplayText()
+    {
+        textPro.text = showText[index];
+        anim.Play("pop");                   // Needs Review
+        yield return new  WaitForSeconds(3f);
+        textPro.text = "";             
     }
 }

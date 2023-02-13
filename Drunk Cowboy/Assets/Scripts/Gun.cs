@@ -78,6 +78,10 @@ public class Gun : MonoBehaviour
         if (isHitTarget)
         {
             countShots += clearShot;
+            if (countShots >= 1)
+            {
+                FindObjectOfType<PopupText>().GenerateRandomWord();
+            }
         }
         else
         {
