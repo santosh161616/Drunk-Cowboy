@@ -7,10 +7,14 @@ public class BottlesSpawner : MonoBehaviour
     [SerializeField] List<WaveConfig> waveConfigs;
     int waveIndex = 0;
     public int bottlesLeftInWave;
+    Gun gunReference;
+
+    float timeRemaining = 3f;
 
     // Start is called before the first frame update
     void Start()
-    {     
+    {      
+        gunReference = FindObjectOfType<Gun>();
         StartCoroutine(SpawnAllWaves());
     }
 
@@ -32,7 +36,7 @@ public class BottlesSpawner : MonoBehaviour
         {
             var newBottle = Instantiate(waveConfig.GetBottlePrefab(), waveConfig.GetWayPoints()[0].transform.position, Quaternion.identity);
             newBottle.GetComponent<Pathing>().SetWaveConfig(waveConfig);
-            yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());            
+            yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());           
         }
     }
 
@@ -41,6 +45,18 @@ public class BottlesSpawner : MonoBehaviour
         if(bottlesLeftInWave == 0)
         {
             StartCoroutine(SpawnAllWaves());
+        }
+        else
+        {
+            if(gunReference.GetMissedShots() > 3)
+            {
+                if (timeRemaining > 3f)
+                {
+                    timeRemaining -= Time.deltaTime;
+                    int seconds = Mathf.CeilToInt(timeRemaining);
+                    Debug.Log(seconds);
+                }
+            }
         }
     }
 }

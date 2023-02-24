@@ -6,7 +6,25 @@ using TMPro;
 public class PopupText : MonoBehaviour
 {
     TextMeshProUGUI textPro;
-    List<string> showText = new List<string>();
+    private readonly List<string> showText = new List<string>()
+    {
+        "Gun Slinger",
+        "Top Gun!",
+        "Yee Haw!",
+        "Bravo",
+        "Gun Master",
+        "Amazing",
+        "Fantastic",
+        "Marvelous",
+        "Giddyup",
+        "Dagnabbit",
+        "Git along, little dogie",
+        "Whoopin' and a hollerin'",
+        "Lasso",
+        "Roundup",
+        "Rawhide",
+        "Highfalutin"
+    };
     private int index;
     Animator anim;
 
@@ -14,18 +32,9 @@ public class PopupText : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         textPro = GetComponent<TextMeshProUGUI>();
-        showText.Add("Gun Slinger");
-        showText.Add("Top Gun!");
-        showText.Add("YeeHaw!");
-        showText.Add("Bravo");
-        showText.Add("Gun Master");
-        showText.Add("Amazing");
-        showText.Add("Fantastic");
-        showText.Add("Marvelous");
-
     }
 
-    public void GenerateRandomWord()
+    public void DisplayRandomText()
     {
         index = Random.Range(0, showText.Count);        
         StartCoroutine(DisplayText());
@@ -34,8 +43,8 @@ public class PopupText : MonoBehaviour
     IEnumerator DisplayText()
     {
         textPro.text = showText[index];
-        anim.Play("pop");                   // Needs Review
-        yield return new  WaitForSeconds(3f);
+        anim.Play("pop", -1, 0f);                   
+        yield return new  WaitForSeconds(1f);
         textPro.text = "";             
     }
 }

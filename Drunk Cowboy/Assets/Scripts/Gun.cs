@@ -17,7 +17,7 @@ public class Gun : MonoBehaviour
     float shotTime;
     public int bulletsLeft = 8;
     int countShots = 0;
-    bool hitTarget;
+    int missedShots = 0;
 
     public Image[] bullets;
     public Sprite loadedBullets;
@@ -80,13 +80,20 @@ public class Gun : MonoBehaviour
             countShots += clearShot;
             if (countShots >= 1)
             {
-                FindObjectOfType<PopupText>().GenerateRandomWord();
+                FindObjectOfType<PopupText>().DisplayRandomText();
             }
         }
         else
         {
             countShots = 0;
+            missedShots += clearShot;
         }
-        Debug.Log(countShots + ";" + isHitTarget);
+        Debug.Log("Count Shots"+countShots + ";" + isHitTarget);
+        Debug.Log("Missed Shots"+missedShots + ";" + isHitTarget);
+    }
+
+    public int GetMissedShots()
+    {
+        return missedShots;
     }
 }
