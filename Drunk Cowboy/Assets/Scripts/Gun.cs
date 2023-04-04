@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
     public int speed = 5;
     public GameObject projectile;
     public GameObject shotPoint;
+    public GameObject timerObj;
     public AudioClip gunShotSFX;
     [Range(0,1)]
     public float gunShotVolume; 
@@ -23,12 +24,13 @@ public class Gun : MonoBehaviour
     public Sprite loadedBullets;
     public Sprite emptyBullets;
 
+    private float timerDuration = 3f;            //Counter to generate Popup Text.
     // Update is called once per frame
     void Update()
     {
         UpdateLoadBulletsUI(bulletsLeft);
         transform.Rotate(0, 0, speed * Time.deltaTime);
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && missedShots < timerDuration)
         {
             if(Time.time >= shotTime && bulletsLeft > 0)
             {
@@ -44,6 +46,10 @@ public class Gun : MonoBehaviour
                     bulletsLeft = 8;
                 }
             }            
+        }
+        if(missedShots > timerDuration /* Add a bool from Timer to validate */)
+        {
+            timerObj.GetComponent<Timer>().TimerToWait();
         }
     }
 
@@ -78,7 +84,8 @@ public class Gun : MonoBehaviour
         if (isHitTarget)
         {
             countShots += clearShot;
-            if (countShots >= 1)
+            missedShots = 0;
+            if (countShots >= timerDuration)
             {
                 FindObjectOfType<PopupText>().DisplayRandomText();
             }
@@ -86,11 +93,11 @@ public class Gun : MonoBehaviour
         else
         {
             countShots = 0;
-            missedShots += clearShot;
+            missedShots += clearShot;            
         }
         Debug.Log("Count Shots"+countShots + ";" + isHitTarget);
         Debug.Log("Missed Shots"+missedShots + ";" + isHitTarget);
-    }
+    }   
 
     public int GetMissedShots()
     {
