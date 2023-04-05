@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class Gun : MonoBehaviour
 {    
     public int speed = 5;
-    public GameObject projectile;
-    public GameObject shotPoint;
-    public GameObject timerObj;
-    public AudioClip gunShotSFX;
+    public GameObject projectile;               //Bullets projectile.    
+    public GameObject shotPoint;                //Shotpoint to shoot bullets.
+    public GameObject timerObj;                 //Object from Timer Class
+    public AudioClip gunShotSFX;                //Sound effect for bullets.
     [Range(0,1)]
-    public float gunShotVolume; 
-    public float timeBerweenShots = 0.2f;
+    public float gunShotVolume;                 //Volume for Gun sound. 
+    public float timeBerweenShots = 0.2f;       //time between bullet shots.
 
     public int score = 0;    
     float shotTime;
@@ -20,17 +20,19 @@ public class Gun : MonoBehaviour
     int countShots = 0;
     int missedShots = 0;
 
-    public Image[] bullets;
-    public Sprite loadedBullets;
-    public Sprite emptyBullets;
+    public Image[] bullets;                     //Array to hold Bullets
+    public Sprite loadedBullets;                //Loaded Bullet sprites.
+    public Sprite emptyBullets;                 //Empty bullet sprites.
 
     private float timerDuration = 3f;            //Counter to generate Popup Text.
+    int tempValue = 3;                           // Integer to validate the bullet stoper.   
+
     // Update is called once per frame
     void Update()
     {
         UpdateLoadBulletsUI(bulletsLeft);
         transform.Rotate(0, 0, speed * Time.deltaTime);
-        if (Input.GetMouseButton(0) && missedShots < timerDuration)
+        if (Input.GetMouseButton(0) && missedShots < tempValue)
         {
             if(Time.time >= shotTime && bulletsLeft > 0)
             {
@@ -47,7 +49,7 @@ public class Gun : MonoBehaviour
                 }
             }            
         }
-        if(missedShots > timerDuration /* Add a bool from Timer to validate */)
+        if(missedShots >= tempValue /* Add a bool from Timer to validate */)
         {
             timerObj.GetComponent<Timer>().TimerToWait();
         }
@@ -85,7 +87,7 @@ public class Gun : MonoBehaviour
         {
             countShots += clearShot;
             missedShots = 0;
-            if (countShots >= timerDuration)
+            if (countShots >= tempValue)
             {
                 FindObjectOfType<PopupText>().DisplayRandomText();
             }

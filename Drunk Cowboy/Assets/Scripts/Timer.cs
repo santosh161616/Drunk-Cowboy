@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
         float timeLeft = timerDuration;
         while (timeLeft > 0)
         {
-            textMash.text = "Wait for Time" + Mathf.Ceil(timeLeft).ToString() + "s";
+            textMash.text = "Wait for Time" + Mathf.Ceil(timeLeft).ToString() + " s";
             yield return new WaitForSeconds(0.1f);
             timeLeft -= 0.1f;
         }
