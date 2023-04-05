@@ -51,7 +51,7 @@ public class Gun : MonoBehaviour
         }
         if(missedShots >= tempValue /* Add a bool from Timer to validate */)
         {
-            timerObj.GetComponent<Timer>().TimerToWait();
+            timerObj.GetComponent<Timer>().StartTimer();
         }
     }
 
