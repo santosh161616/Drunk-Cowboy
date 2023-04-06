@@ -18,14 +18,13 @@ public class Gun : MonoBehaviour
     float shotTime;
     public int bulletsLeft = 8;
     int countShots = 0;
-    int missedShots = 0;
+    public int missedShots = 0;
 
     public Image[] bullets;                     //Array to hold Bullets
     public Sprite loadedBullets;                //Loaded Bullet sprites.
     public Sprite emptyBullets;                 //Empty bullet sprites.
 
-    private float timerDuration = 3f;            //Counter to generate Popup Text.
-    int tempValue = 3;                           // Integer to validate the bullet stoper.   
+    int tempValue = 3;                          // Integer to validate the bullet stoper.   
 
     // Update is called once per frame
     void Update()
@@ -51,7 +50,8 @@ public class Gun : MonoBehaviour
         }
         if(missedShots >= tempValue /* Add a bool from Timer to validate */)
         {
-            timerObj.GetComponent<Timer>().StartTimer();
+            
+            timerObj.GetComponent<Timer>().StartTimer(true);
         }
     }
 
@@ -104,5 +104,15 @@ public class Gun : MonoBehaviour
     public int GetMissedShots()
     {
         return missedShots;
+    }
+
+    public void DisableTimer()
+    {
+        timerObj.SetActive(false);
+    }
+
+    public void EnableTimer()
+    {
+        timerObj.SetActive(true);
     }
 }

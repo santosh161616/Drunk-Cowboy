@@ -8,27 +8,40 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI textMash;            //TextMash Pro for timer.
     public bool timeRunning = false;            // to check the time counter.
     float timerDuration = 3f;
+    Gun gunReference;
 
     // Start is called before the first frame update
     void Start()
     {
         textMash = GetComponent<TextMeshProUGUI>();;
         timeRunning = true;
+        gunReference = FindObjectOfType<Gun>();
     }
 
-    public void StartTimer()
+    public void StartTimer(bool timeRunning)
     {
+        this.timeRunning = timeRunning;
         if (timeRunning)
-        { 
+        {            
             if (timerDuration > 0)
-            {               
+            {   
+                if(gunReference.GetMissedShots() >= 3)
+                {
+                    gunReference.EnableTimer();
+                }            
                 timerDuration -= Time.deltaTime;
-                UpdateTimer(timerDuration);                              
+                UpdateTimer(timerDuration);
+                if(timerDuration <= 0)
+                {
+                    gunReference.DisableTimer();
+                }
             }
             else
-            {
-                timerDuration = 0;
-                timeRunning = false;
+            {               
+                
+                timeRunning = false;                
+                timerDuration = 3f;
+                gunReference.missedShots = 0;
             }
         }        
     }
