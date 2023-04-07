@@ -13,6 +13,7 @@ public class Gun : MonoBehaviour
     [Range(0,1)]
     public float gunShotVolume;                 //Volume for Gun sound. 
     public float timeBerweenShots = 0.2f;       //time between bullet shots.
+    public bool isGamePlayble = true;
 
     public int score = 0;    
     float shotTime;
@@ -30,7 +31,15 @@ public class Gun : MonoBehaviour
     void Update()
     {
         UpdateLoadBulletsUI(bulletsLeft);
-        transform.Rotate(0, 0, speed * Time.deltaTime);
+        if (isGamePlayble)
+        {
+            PlayGame();
+        }
+        else
+        {
+            GameStopper();
+        }
+        // transform.Rotate(0, 0, speed * Time.deltaTime);
         if (Input.GetMouseButton(0) && missedShots < tempValue)
         {
             if(Time.time >= shotTime && bulletsLeft > 0)
@@ -49,8 +58,7 @@ public class Gun : MonoBehaviour
             }            
         }
         if(missedShots >= tempValue /* Add a bool from Timer to validate */)
-        {
-            
+        {            
             timerObj.GetComponent<Timer>().StartTimer(true);
         }
     }
@@ -114,5 +122,15 @@ public class Gun : MonoBehaviour
     public void EnableTimer()
     {
         timerObj.SetActive(true);
+    }
+
+    public void GameStopper()
+    {
+        transform.Rotate(0, 0, 0);
+    }
+
+    public void PlayGame()
+    {
+        transform.Rotate(0, 0, speed * Time.deltaTime);
     }
 }

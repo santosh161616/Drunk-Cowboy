@@ -28,12 +28,14 @@ public class Timer : MonoBehaviour
                 if(gunReference.GetMissedShots() >= 3)
                 {
                     gunReference.EnableTimer();
+                    gunReference.isGamePlayble = false;
                 }            
                 timerDuration -= Time.deltaTime;
                 UpdateTimer(timerDuration);
                 if(timerDuration <= 0)
                 {
                     gunReference.DisableTimer();
+                    gunReference.isGamePlayble = true;
                 }
             }
             else
@@ -53,6 +55,6 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        textMash.text = "Wait for Time " + Mathf.Ceil(timerDuration).ToString() + " s";
+        textMash.text = "You Missed!!! " + Mathf.Ceil(timerDuration).ToString() + " s";
     }
 }
