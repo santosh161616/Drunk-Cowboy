@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 446deefe607c0544294aec961c0d3712, type: 3}
-  m_Name: Wave 2
+  m_Name: Wave 6
   m_EditorClassIdentifier: 
-  bottlePrefab: {fileID: 5830378015207455642, guid: 6bd3ec353ce93964cb6fe2bb04acf2ad, type: 3}
+  bottlePrefab: {fileID: 5830378015207455642, guid: 624da3c77ceb07d4e839c5449ae5ec78, type: 3}
   pathPrefab: {fileID: 7676537109180245859, guid: dd4ac77b1be3bad419ef9c368d561174, type: 3}
-  timeBetweenSpawns: 0.8
+  timeBetweenSpawns: 0.3
   spawnRandomFactor: 1.5
   numberOfBottles: 5
-  moveSpeed: 5
+  moveSpeed: 6

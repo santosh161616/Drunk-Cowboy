@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 446deefe607c0544294aec961c0d3712, type: 3}
-  m_Name: Wave 2
+  m_Name: Wave 10
   m_EditorClassIdentifier: 
-  bottlePrefab: {fileID: 5830378015207455642, guid: 6bd3ec353ce93964cb6fe2bb04acf2ad, type: 3}
+  bottlePrefab: {fileID: 5830378015207455642, guid: 78c819b0626a5a048a09b0ba4db1d24c, type: 3}
   pathPrefab: {fileID: 7676537109180245859, guid: dd4ac77b1be3bad419ef9c368d561174, type: 3}
   timeBetweenSpawns: 0.8
   spawnRandomFactor: 1.5

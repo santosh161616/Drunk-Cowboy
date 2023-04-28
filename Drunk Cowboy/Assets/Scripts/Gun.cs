@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {    
-    public int speed = 5;
+    public int speed = 6;
     public GameObject projectile;               //Bullets projectile.    
     public GameObject shotPoint;                //Shotpoint to shoot bullets.
     public GameObject timerObj;                 //Object from Timer Class
@@ -26,6 +26,7 @@ public class Gun : MonoBehaviour
     public Sprite emptyBullets;                 //Empty bullet sprites.
 
     int tempValue = 3;                          // Integer to validate the bullet stoper.   
+    float tempSpeed = 1f;
 
     // Update is called once per frame
     void Update()
