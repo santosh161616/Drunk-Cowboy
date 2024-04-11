@@ -55,6 +55,6 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        textMash.text = "You Missed!!! " + Mathf.Ceil(timerDuration).ToString() + " s";
+        textMash.text = "You Missed!!!\n" + Mathf.Ceil(timerDuration).ToString() + " s";
     }
 }
