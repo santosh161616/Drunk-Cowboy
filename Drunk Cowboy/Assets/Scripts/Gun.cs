@@ -4,18 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
-{    
+{
     public int speed = 6;
     public GameObject projectile;               //Bullets projectile.    
     public GameObject shotPoint;                //Shotpoint to shoot bullets.
     public GameObject timerObj;                 //Object from Timer Class
     public AudioClip gunShotSFX;                //Sound effect for bullets.
-    [Range(0,1)]
+    [Range(0, 1)]
     public float gunShotVolume;                 //Volume for Gun sound. 
     public float timeBerweenShots = 0.2f;       //time between bullet shots.
     public bool isGamePlayble = true;
 
-    public int score = 0;    
+    public int score = 0;
     float shotTime;
     public int bulletsLeft = 8;
     int countShots = 0;
@@ -43,23 +43,23 @@ public class Gun : MonoBehaviour
         // transform.Rotate(0, 0, speed * Time.deltaTime);
         if (Input.GetMouseButton(0) && missedShots < tempValue)
         {
-            if(Time.time >= shotTime && bulletsLeft > 0)
+            if (Time.time >= shotTime && bulletsLeft > 0)
             {
-               /* hitTarget = false;
-                CountHitShots(hitTarget, countShots);*/
+                /* hitTarget = false;
+                 CountHitShots(hitTarget, countShots);*/
 
                 AudioSource.PlayClipAtPoint(gunShotSFX, Camera.main.transform.position, gunShotVolume);
                 Instantiate(projectile, shotPoint.transform.position, transform.rotation);
                 shotTime = timeBerweenShots + Time.time;
                 bulletsLeft--;
-                if(bulletsLeft <= 0)
+                if (bulletsLeft <= 0)
                 {
                     bulletsLeft = 8;
                 }
-            }            
+            }
         }
-        if(missedShots >= tempValue /* Add a bool from Timer to validate */)
-        {            
+        if (missedShots >= tempValue /* Add a bool from Timer to validate */)
+        {
             timerObj.GetComponent<Timer>().StartTimer(true);
         }
     }
@@ -79,7 +79,7 @@ public class Gun : MonoBehaviour
     {
         for (int i = 0; i < bullets.Length; i++)
         {
-            if(i < bulletsLeft)
+            if (i < bulletsLeft)
             {
                 bullets[i].sprite = loadedBullets;
             }
@@ -104,11 +104,11 @@ public class Gun : MonoBehaviour
         else
         {
             countShots = 0;
-            missedShots += clearShot;            
+            missedShots += clearShot;
         }
-        Debug.Log("Count Shots"+countShots + ";" + isHitTarget);
-        Debug.Log("Missed Shots"+missedShots + ";" + isHitTarget);
-    }   
+        Debug.Log("Count Shots" + countShots + ";" + isHitTarget);
+        Debug.Log("Missed Shots" + missedShots + ";" + isHitTarget);
+    }
 
     public int GetMissedShots()
     {
@@ -132,6 +132,6 @@ public class Gun : MonoBehaviour
 
     public void PlayGame()
     {
-        transform.Rotate(0, 0, speed * Time.deltaTime);
+        transform.Rotate(0, 0, -speed * Time.deltaTime);
     }
 }

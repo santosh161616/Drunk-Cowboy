@@ -1,0 +1,681 @@
+fileFormatVersion: 2
+guid: 00f3356e256b08541834a22fe514922a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bottle2_PSD_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 75
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -281.55264, y: -116.1947}
+        - {x: -281.55264, y: 111.331604}
+        - {x: -203.39474, y: 111.331604}
+        - {x: -203.39474, y: -116.1947}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58eacd67aa5e3ec4e86d2a7acba0f89d
+      internalID: -1943538351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 67
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.5, y: -104.5}
+        - {x: 29.5, y: -108.5}
+        - {x: 33.5, y: -113.5}
+        - {x: 29.5, y: -113.5}
+        - {x: 29.5, y: -107.5}
+        - {x: 27.5, y: -102.5}
+        - {x: 25.5, y: -102.5}
+        - {x: 33.5, y: -102.5}
+        - {x: 37.5, y: -101.5}
+        - {x: 37.5, y: -51.5}
+        - {x: 29.5, y: -51.5}
+        - {x: 37.5, y: -51.5}
+        - {x: 37.5, y: 56.5}
+        - {x: 11.5, y: 56.5}
+        - {x: 12.5, y: 58.5}
+        - {x: 15.5, y: 56.5}
+        - {x: 37.5, y: 56.5}
+        - {x: 37.5, y: 88.5}
+        - {x: 33.5, y: 88.5}
+        - {x: 35.5, y: 88.5}
+        - {x: 37.5, y: 90.5}
+        - {x: 37.5, y: 98.5}
+        - {x: 14.5, y: 121.5}
+        - {x: 7.5, y: 121.5}
+        - {x: 7.5, y: 118.5}
+        - {x: 12.5, y: 111.5}
+        - {x: 24.5, y: 99.5}
+        - {x: 7.5, y: 96.5}
+        - {x: 7.5, y: 121.5}
+        - {x: -37.5, y: 121.5}
+        - {x: -37.5, y: -46.5}
+        - {x: -34.5, y: -44.5}
+        - {x: -34.5, y: -40.5}
+        - {x: -34.5, y: -47.5}
+        - {x: -37.5, y: -48.5}
+        - {x: -37.5, y: -92.5}
+        - {x: -34.5, y: -91.5}
+        - {x: -34.5, y: -88.5}
+        - {x: -34.5, y: -91.5}
+        - {x: -37.5, y: -93.5}
+        - {x: -37.5, y: -121.5}
+        - {x: 37.5, y: -121.5}
+        - {x: 37.5, y: -108.5}
+        - {x: 33.5, y: -102.5}
+      - - {x: 28.5, y: -121.5}
+        - {x: 28.5, y: -119.5}
+        - {x: 25.5, y: -118.5}
+        - {x: 23.5, y: -121.5}
+      - - {x: 21.5, y: -110.5}
+        - {x: 22.5, y: -111.5}
+        - {x: 24.5, y: -110.5}
+        - {x: 21.5, y: -113.5}
+        - {x: 22.5, y: -113.5}
+      - - {x: 32.5, y: -56.5}
+        - {x: 27.5, y: -57.5}
+        - {x: 26.5, y: -58.5}
+        - {x: 29.5, y: -59.5}
+      - - {x: 31.5, y: -16.5}
+        - {x: 31.5, y: -19.5}
+        - {x: 33.5, y: -21.5}
+        - {x: 37.5, y: -21.5}
+        - {x: 37.5, y: -14.5}
+        - {x: 33.5, y: -14.5}
+      - - {x: 29.5, y: 19.5}
+        - {x: 30.5, y: 20.5}
+        - {x: 30.5, y: 21.5}
+        - {x: 31.5, y: 22.5}
+        - {x: 30.5, y: 21.5}
+        - {x: 31.5, y: 19.5}
+        - {x: 30.5, y: 18.5}
+        - {x: 31.5, y: 17.5}
+        - {x: 30.5, y: 17.5}
+      - - {x: 18.5, y: 20.5}
+        - {x: 18.5, y: 21.5}
+        - {x: 18.5, y: 20.5}
+        - {x: 19.5, y: 19.5}
+        - {x: 19.5, y: 18.5}
+        - {x: 20.5, y: 18.5}
+      - - {x: 14.5, y: 37.5}
+        - {x: 15.5, y: 36.5}
+        - {x: 31.5, y: 37.5}
+      - - {x: 27.5, y: 44.5}
+        - {x: 30.5, y: 47.5}
+        - {x: 30.5, y: 49.5}
+        - {x: 31.5, y: 50.5}
+        - {x: 30.5, y: 49.5}
+        - {x: 30.5, y: 45.5}
+        - {x: 17.5, y: 45.5}
+      - - {x: 13.5, y: 49.5}
+        - {x: 12.5, y: 49.5}
+        - {x: 12.5, y: 47.5}
+        - {x: 13.5, y: 46.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072e6531e94588c47bea59057c38199c
+      internalID: -2082975958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 70
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ece0fbb6cf5294d877e2ece442a713
+      internalID: -765892090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 73
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c32c1fe24d9d134aade39038ba63ec0
+      internalID: -1333127224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 0
+        width: 77
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b45dda0966a434a8db22b21bf90ac3
+      internalID: 858731967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_5
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 72
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f627a09080b4a0c4da72e05fdda6b3b1
+      internalID: 1280615879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_6
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 0
+        width: 69
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec67160515ffda4dba3fa5e30eb3d0e
+      internalID: 1188583582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_7
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 14
+        width: 59
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3391ad5319a4224ba46e79fe96f5feb
+      internalID: -75607866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_8
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 17
+        width: 77
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb24351f78639745aa016a9de9e247f
+      internalID: 1666894049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_9
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 17
+        width: 73
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67a2a1c08aa05d4ebfa8faaf0a97b11
+      internalID: -117335434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_10
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 17
+        width: 67
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f03ccb36d68ac747874bfec4767689e
+      internalID: 1621783265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_11
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 16
+        width: 75
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb336be72c907943ac0e1a1ba55eb25
+      internalID: 71892224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_12
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 15
+        width: 71
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2c97b74f9dac141bcb984e88794118
+      internalID: 1625554895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_13
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 15
+        width: 75
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0673a5e333b572f4d8b7fe6489d6db66
+      internalID: -1870869014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_14
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 13
+        width: 64
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26808e67443623f48a7764ecaa06c967
+      internalID: -313797092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_15
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 11
+        width: 68
+        height: 189
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407664277c3f631409ef43cfcd18d6c3
+      internalID: -776684601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 75
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c021be9f5e991b45b53058191ff7bff
+      internalID: 1659765239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_17
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 67
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5092edc1a039fc042a7b27762c9b5635
+      internalID: -2119937333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bottle2_PSD_18
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0
+        width: 72
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433a7792dd5ecb7429ed04cbe14fcea6
+      internalID: -1542258603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bottle2_PSD_0: -1943538351
+      bottle2_PSD_1: -2082975958
+      bottle2_PSD_10: 1621783265
+      bottle2_PSD_11: 71892224
+      bottle2_PSD_12: 1625554895
+      bottle2_PSD_13: -1870869014
+      bottle2_PSD_14: -313797092
+      bottle2_PSD_15: -776684601
+      bottle2_PSD_16: 1659765239
+      bottle2_PSD_17: -2119937333
+      bottle2_PSD_18: -1542258603
+      bottle2_PSD_19: -1796405067
+      bottle2_PSD_2: -765892090
+      bottle2_PSD_3: -1333127224
+      bottle2_PSD_4: 858731967
+      bottle2_PSD_5: 1280615879
+      bottle2_PSD_6: 1188583582
+      bottle2_PSD_7: -75607866
+      bottle2_PSD_8: 1666894049
+      bottle2_PSD_9: -117335434
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
