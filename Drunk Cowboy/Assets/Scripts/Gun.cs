@@ -27,6 +27,8 @@ public class Gun : MonoBehaviour
 
     int tempValue = 3;                          // Integer to validate the bullet stoper.   
     float tempSpeed = 1f;
+    float extraRotationAmount = 10f;
+
 
     // Update is called once per frame
     void Update()
@@ -127,7 +129,7 @@ public class Gun : MonoBehaviour
 
     public void GameStopper()
     {
-        transform.Rotate(0, 0, 0);
+        transform.Rotate(Vector3.zero);
     }
 
     public void PlayGame()
