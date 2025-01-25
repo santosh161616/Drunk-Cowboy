@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave 1
   m_EditorClassIdentifier: 
   bottlePrefab: {fileID: 5830378015207455642, guid: a57e890b7237b2a4590942cc07a2a3c6, type: 3}
-  pathPrefab: {fileID: 7676537109180245859, guid: dd4ac77b1be3bad419ef9c368d561174, type: 3}
+  pathPrefab: {fileID: 916002977099610895, guid: beaba31000888274cafee8881e9a93b8, type: 3}
   timeBetweenSpawns: 0.5
   spawnRandomFactor: 1
   numberOfBottles: 3
