@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Pathing : MonoBehaviour
     [SerializeField] WaveConfig waveConfig;
     [SerializeField] private List<Transform> wayPoints;
     int wayPointIndex = 0;
+    Action OnReachingwaypoint;
     //private Animator anim;
 
     // Start is called before the first frame update
@@ -22,18 +24,23 @@ public class Pathing : MonoBehaviour
         this.waveConfig = waveConfig;
     }
 
+    float targetRotationZ = 0f;
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, -270 * Time.deltaTime);
+        //transform.Rotate(0, 0, -270 * Time.deltaTime);
         if (wayPointIndex <= wayPoints.Count - 1)
         {
-            Debug.Log("Rotating -" + transform.rotation);
             var targetPosition = wayPoints[wayPointIndex].transform.position;
             var moveThisFrame = waveConfig.MoveSpeed() * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveThisFrame);
-            if (transform.position == targetPosition)
+            if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
             {
+                targetRotationZ -= 90f;
+
+                // Apply rotation directly (without RotateTowards)
+                transform.rotation = Quaternion.Euler(0, 0, targetRotationZ);
+                Debug.Log("Rotating -" + transform.rotation);
                 wayPointIndex++;
                 if (wayPointIndex == wayPoints.Count)
                 {
