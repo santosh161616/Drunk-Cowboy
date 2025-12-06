@@ -40,7 +40,7 @@ public class Pathing : MonoBehaviour
 
                 // Apply rotation directly (without RotateTowards)
                 transform.rotation = Quaternion.Euler(0, 0, targetRotationZ);
-                Debug.Log("Rotating -" + transform.rotation);
+                //Debug.Log("Rotating -" + transform.rotation);
                 wayPointIndex++;
                 if (wayPointIndex == wayPoints.Count)
                 {

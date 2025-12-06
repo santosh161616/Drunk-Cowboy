@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using cowboy.utils;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +28,11 @@ public class Gun : MonoBehaviour
     float tempSpeed = 1f;
     float extraRotationAmount = 10f;
 
+    private void Start()
+    {
+        GameEvents.Instance.OnBottleBreak += BrokenBottles;
+        GameEvents.Instance.OnCountingHitShots += CountHitShots;
+    }
 
     // Update is called once per frame
     void Update()
@@ -135,5 +139,11 @@ public class Gun : MonoBehaviour
     public void PlayGame()
     {
         transform.Rotate(0, 0, -speed * Time.deltaTime);
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.Instance.OnBottleBreak -= BrokenBottles;
+        GameEvents.Instance.OnCountingHitShots -= CountHitShots;
     }
 }
