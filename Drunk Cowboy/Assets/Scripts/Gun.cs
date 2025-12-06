@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
     [Range(0, 1)]
     public float gunShotVolume;                 //Volume for Gun sound. 
     public float timeBerweenShots = 0.2f;       //time between bullet shots.
-    public bool isGamePlayble = true;
+    private bool _isGamePlayble = true;
 
     public int score = 0;
     float shotTime;
@@ -25,8 +25,9 @@ public class Gun : MonoBehaviour
     public Sprite emptyBullets;                 //Empty bullet sprites.
 
     int tempValue = 3;                          // Integer to validate the bullet stoper.   
-    float tempSpeed = 1f;
-    float extraRotationAmount = 10f;
+
+    public bool IsGamePlayble { get { return _isGamePlayble; } set { _isGamePlayble = value; } }
+
 
     private void Start()
     {
@@ -38,7 +39,7 @@ public class Gun : MonoBehaviour
     void Update()
     {
         UpdateLoadBulletsUI(bulletsLeft);
-        if (isGamePlayble)
+        if (_isGamePlayble)
         {
             PlayGame();
         }
@@ -64,10 +65,10 @@ public class Gun : MonoBehaviour
                 }
             }
         }
-        if (missedShots >= tempValue /* Add a bool from Timer to validate */)
-        {
-            timerObj.GetComponent<Timer>().StartTimer(true);
-        }
+        //if (missedShots >= tempValue /* Add a bool from Timer to validate */)
+        //{
+        //    timerObj.GetComponent<Timer>().StartTimer(true);
+        //}
     }
 
     public void BrokenBottles(int newbBokenBottles)
@@ -111,6 +112,13 @@ public class Gun : MonoBehaviour
         {
             countShots = 0;
             missedShots += clearShot;
+            if(missedShots >= tempValue)
+            {
+                GameEvents.Instance.MissedEnoughShots();
+                GameEvents.Instance.TimerStart(true);
+                _isGamePlayble = false;
+            }          
+            
         }
         Debug.Log("Count Shots" + countShots + ";" + isHitTarget);
         Debug.Log("Missed Shots" + missedShots + ";" + isHitTarget);
@@ -123,11 +131,13 @@ public class Gun : MonoBehaviour
 
     public void DisableTimer()
     {
+        IsGamePlayble = true;
         timerObj.SetActive(false);
     }
 
     public void EnableTimer()
     {
+
         timerObj.SetActive(true);
     }
 

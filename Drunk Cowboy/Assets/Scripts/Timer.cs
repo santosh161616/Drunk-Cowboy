@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using cowboy.utils;
 
 public class Timer : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Timer : MonoBehaviour
         textMash = GetComponent<TextMeshProUGUI>();;
         timeRunning = true;
         gunReference = FindObjectOfType<Gun>();
+        GameEvents.Instance.OnTimerStart += StartTimer;
     }
 
     public void StartTimer(bool timeRunning)
@@ -24,23 +26,17 @@ public class Timer : MonoBehaviour
         if (timeRunning)
         {            
             if (timerDuration > 0)
-            {   
-                if(gunReference.GetMissedShots() >= 3)
-                {
-                    gunReference.EnableTimer();
-                    gunReference.isGamePlayble = false;
-                }            
+            {              
                 timerDuration -= Time.deltaTime;
                 UpdateTimer(timerDuration);
                 if(timerDuration <= 0)
                 {
                     gunReference.DisableTimer();
-                    gunReference.isGamePlayble = true;
                 }
             }
             else
             {               
-                
+                GameEvents.Instance.TimerEnd();
                 timeRunning = false;                
                 timerDuration = 3f;
                 gunReference.missedShots = 0;
@@ -56,5 +52,10 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
         textMash.text = "You Missed!!!\n" + Mathf.Ceil(timerDuration).ToString() + " s";
+    }
+
+    private void OnDestroy()
+    {
+        GameEvents.Instance.OnTimerStart -= StartTimer;
     }
 }

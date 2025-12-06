@@ -6,20 +6,25 @@ using UnityEngine;
 public class BottlesSpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfig> waveConfigs;
+
     int waveIndex = 0;
-    public int bottlesLeftInWave;
-    Gun gunReference;
-
-    float timeRemaining = 3f;
-
+    public int _bottlesLeftInWave;
+    private Coroutine _waveStartCoroutine;
     public void BottlesLeftInWave(int value)
     {
-        bottlesLeftInWave -= value;
+        _bottlesLeftInWave -= value;
+        if(_bottlesLeftInWave <= 0)
+        {
+            if(_waveStartCoroutine != null)
+            {
+                StopCoroutine(_waveStartCoroutine);
+            }
+            _waveStartCoroutine = StartCoroutine(SpawnAllWaves());
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        gunReference = FindObjectOfType<Gun>();
         StartCoroutine(SpawnAllWaves());
         GameEvents.Instance.OnBottleLeft += BottlesLeftInWave;
     }
@@ -27,7 +32,7 @@ public class BottlesSpawner : MonoBehaviour
     private IEnumerator SpawnAllWaves()
     {
         var currentWave = waveConfigs[waveIndex];
-        bottlesLeftInWave = waveConfigs[waveIndex].NumberOfBottles();
+        _bottlesLeftInWave = waveConfigs[waveIndex].NumberOfBottles();
         yield return StartCoroutine(SpawnAllBottlesInWave(currentWave));
         waveIndex++;
         if (waveIndex >= waveConfigs.Count)
@@ -43,26 +48,6 @@ public class BottlesSpawner : MonoBehaviour
             var newBottle = Instantiate(waveConfig.GetBottlePrefab(), waveConfig.GetWayPoints()[0].transform.position, Quaternion.identity);
             newBottle.GetComponent<Pathing>().SetWaveConfig(waveConfig);
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
-        }
-    }
-
-    private void Update()
-    {
-        if (bottlesLeftInWave == 0)
-        {
-            StartCoroutine(SpawnAllWaves());
-        }
-        else
-        {
-            if (gunReference.GetMissedShots() > 3)
-            {
-                if (timeRemaining > 3f)
-                {
-                    timeRemaining -= Time.deltaTime;
-                    int seconds = Mathf.CeilToInt(timeRemaining);
-                    Debug.Log(seconds);
-                }
-            }
         }
     }
 

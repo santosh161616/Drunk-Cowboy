@@ -16,7 +16,7 @@ public class Bottle : MonoBehaviour
         GameEvents.Instance.BottleLeft(count);
         GameEvents.Instance.BottleBroken(count);
         GameEvents.Instance.CountingHitShots(true, count);
-        AudioSource.PlayClipAtPoint(bottleDestroySFX, Camera.main.transform.position, 1f);
+        AudioSource.PlayClipAtPoint(bottleDestroySFX, Camera.main.transform.position, bottleDestroyVolume);
         Destroy(gameObject);
         Destroy(collision.gameObject);
     }

@@ -22,5 +22,23 @@ namespace cowboy.utils
         {
             OnBottleLeft?.Invoke(count);
         }
+
+        public Action OnMissedEnoughShots = delegate { };
+        public void MissedEnoughShots()
+        {
+            OnMissedEnoughShots?.Invoke();
+        }
+
+        public Action<bool> OnTimerStart = delegate { };
+        public void TimerStart(bool timeRunning)
+        {
+            OnTimerStart?.Invoke(timeRunning);
+        }
+
+        public Action OnTimerEnd = delegate { };
+        public void TimerEnd()
+        {
+            OnTimerEnd?.Invoke();
+        }
     }
 }
